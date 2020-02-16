@@ -1,0 +1,25 @@
+{
+  "name": "warsztaty-backend-express",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .src/app.js",
+    "dev": "npm-run-all -l -p dev:*",
+    "dev:server": "nodemon src/app.js",
+    "dev:client": "cd client && yarn build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.9.1",
+    "npm-run-all": "^4.1.5",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
