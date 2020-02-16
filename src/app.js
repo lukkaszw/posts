@@ -32,7 +32,7 @@ app.get('*', (req, res) => {
 require('../config/database');
 
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log('Server is listening on port 8000');
 })
 
