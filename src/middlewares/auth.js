@@ -9,6 +9,6 @@ const isAuth = (req, res, next) => {
   }
   req.userEmail = req.user.emails[0].value;
   next();
-}
+};
 
 module.exports = isAuth;
