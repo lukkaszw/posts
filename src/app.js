@@ -15,7 +15,7 @@ app.use(passport.session());
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 const authRouter = require('./routes/auth.routes');
 const usersRouter = require('./routes/user.routes');
@@ -26,7 +26,7 @@ app.use('/user', usersRouter);
 app.use('/posts', postsRouter);
 
 app.get('*', (req, res) => {                       
-  res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'));                               
+  res.sendFile(path.resolve(__dirname, '..', 'public', 'index.html'));                               
 });
 
 require('../config/database');
